@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>네비게이션 메뉴</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <!-- <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script> -->
+</head>
+<body>
+    <div>
+        <h2>과일</h2>
+        <ol>
+            열대과일
+            <li>망고</li>
+            <li>파파야</li>
+            <li>망고스틴</li>
+            <li>바나나
+                <ol>하위 목록
+                    <li>원숭이 바나나</li>
+                    <li>사료용 바나나</li>
+                    <li>식용 바나나</li>
+                </ol>
+            </li>
+        </ol>
+        <!-- 결과
+            과일
+             열대 과일
+          1. 망고
+          2. 파파야
+          3. 망고스틴
+          4. 바나나
+                 하위목록
+              1. 원숭이 바나나
+              2. 사료용 바나나
+              3. 식용 바나나-->
+    
+        <h2>노트북</h2>
+        <ul>
+            <li>삼성</li>
+            <li>LG</li>
+            <li>HP</li>
+                <ul>
+                    <li>XPS15</li>
+                    <li>XPS17</li>
+                    <li>XPS11</li>
+                </ul>
+            <li>DELL</li>
+        </ul>
+
+        <!-- 결과
+        노트북
+           - 삼성
+           - LG
+           - HP
+               - XPS15
+               - XPS17
+               - XPS11
+           - DELL
+        -->
+
+        <h2>혼합</h2>
+        <ul>
+            <li>과일</li>
+            <ol>
+                <li>배</li>
+                <li>사과</li>
+                <li>바나나</li>
+            </ol>
+        </ul>
+        <ul>
+            <li>채소</li>
+            <ol>
+                <li>상추</li>
+                <li>배추</li>
+            </ol>
+        </ul>
+    </div>
+    <hr>
+    <div>
+        <table border="1"> <!-- 테이블에 그냥 글자만 나옴 css에서 스타일 넣음 (border="1"할 경우 선이 나옴)-->
+            <tr>
+                <!-- th : table header의 의미로 조금 진하게 나옴 -->
+                <th></th>
+                <th>월</th>
+                <th>화</th>
+                <th>수</th>
+                <th>목</th>
+                <th>금</th>
+            </tr>
+            <tr>
+                <td>1교시</td>
+                <td>영어</td>
+                <td>국어</td>
+                <td>과학</td>
+                <td colspan="2">미술</td> <!-- colspan="2" : column 2개 합치기-->
+                <!-- <td>기술</td> --> <!-- 합쳐야 하는 부분의 내용 있으면 내용이 깨지기 때문에 잘 지워야 함 -->
+            </tr>
+
+            <tr>
+                <td>2교시</td>
+                <td>도덕</td>
+                <td>체육</td>
+                <td>영어</td>
+                <td>수학</td>
+                <td rowspan="2">사회</td> <!-- rowspan="2" : row2개 합치기-->
+            </tr>
+
+            <tr>
+                <td>3교시</td>
+                <td>국사</td>
+                <td>독어</td>
+                <td>체육</td>
+                <td>음악</td>
+                <!-- <td>영어</td> -->
+            </tr>
+        </table>
+    </div>
+
+    <div>
+        <audio src="./test.mp3" controls="controls"></audio>
+        <video src="./test.mp4" controls="controls"></video>g
+    </div>
+</body>
+</html>

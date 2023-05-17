@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>CSS</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <!-- <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script> -->
+    <style>
+        /* 
+           * = all(전부)
+           기본 선택자는 기본 태그로 설정
+           id = #으로 설정
+           class = .으로 설정 
+        */
+        * { 
+            color: red;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* h1, h2, p{
+            margin: 0;
+            padding: 0;
+        } */
+        
+        h2{
+            background-color: bisque;
+            color: blueviolet;
+        }
+
+        #first{
+            color: blanchedalmond;
+        }
+
+        .phrase{
+            color: brown;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="title">큰 타이틀</h1>
+    <h2 class="subtitle">타이틀</h2>
+    <p id="first" class="phrase">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maxime totam quos accusantium reiciendis iusto quibusdam aliquid harum deserunt esse expedita.</p>
+    <p id="second" class="phrase">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quam saepe deserunt qui nesciunt doloremque consequatur? Ex cupiditate consequatur placeat dolorum!</p>
+    <!-- id 중복 불가, class 중복 가능 -->
+</body>
+</html>
