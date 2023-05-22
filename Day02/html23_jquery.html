@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>jQuery</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <script src="https://code.jquery.com/jquery-3.7.0.js"
+            integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM="
+            crossorigin="anonymous"></script>
+    
+    <script>
+        // jQuery로 onload 방식 -> 전통 자바스크립트 방식보다 코드가 간결해서 편하다
+        $(document).ready(function() {
+            // 여기에 로직을 적으면 됨
+            $('input').click(function() {
+                $('.page').slideToggle(500);
+            });
+
+            $('.box').css({
+                width: '100px',
+                height: '100px',
+                backgroundColor: 'red'
+            }).delay(1000)
+            .animate({
+                width: '500px',
+                opacity: 0.5  // 투명도
+            }, 1500);
+        });
+    </script>
+</head>
+<body>
+    <input type="button" value="Toggle">
+    <div class="page">
+        <h1>Lorem ipsum dolor sit amet.</h1>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sed repellat earum labore, autem voluptatum quibusdam quae officiis possimus voluptas at? Praesentium itaque sed eveniet odit deserunt eius! Optio dicta hic, reiciendis quaerat illo facilis, suscipit, quod recusandae perspiciatis facere animi doloremque? Quidem quam aliquam eveniet earum ad optio omnis ipsam libero? Impedit, possimus, sunt error omnis perferendis quaerat commodi eaque molestias voluptas a natus cumque. Ipsum, explicabo iure repellendus quaerat tenetur vel optio inventore fuga sapiente veniam quibusdam sunt cupiditate non omnis, sint a dolorum? Consequatur ratione iste quasi? Accusantium sed recusandae omnis accusamus quia doloribus dicta vel illo porro.</p>
+    </div>
+
+    <div class="box"></div>
+</body>
+</html>
