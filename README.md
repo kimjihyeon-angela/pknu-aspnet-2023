@@ -38,3 +38,17 @@ ASP.NET 학습 리포지토리
 	- 사용자 계정 관리 기능 추가
 		- 회원가입
 		- 로그인
+		
+## Day 07
+- ASP.Net Core MVC
+	- 게시판 정리
+	- 권한관리
+	
+## Day 08
+- ASP.Net Core MVC
+	- 부트스트랩 테마(SEO Dream) 적용
+	
+- ASP.Net RestAPI (JQuery, WPF)
+- 개인포트폴리오
+	- 부트스트래 테마 재적용
+	
