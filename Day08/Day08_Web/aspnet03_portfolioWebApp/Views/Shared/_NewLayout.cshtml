@@ -1,0 +1,176 @@
+﻿<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <!-- HTML은 대소문자 구분이 없지만 대문자 사용은 자제할 것! -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- meta name="description" content="">
+    <meta name="author" content="" -->
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dongle:wght@300&family=Nanum+Gothic&display=swap" rel="stylesheet">
+    <title>@ViewData["Title"] - IoT 포트폴리오 웹앱</title>
+    <!-- Bootstrap 5 CDN -->
+    @*<link rel="stylesheet" href="~/themes//seo_dream/vendor/bootstrap/css/bootstrap.min.css" />*@
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css"
+          rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" href="~/themes/seo_dream/assets/css/fontawesome.css">
+    <link rel="stylesheet" href="~/themes/seo_dream/assets/css/templatemo-seo-dream.css">
+    <link rel="stylesheet" href="~/themes/seo_dream/assets/css/animated.css">
+    <link rel="stylesheet" href="~/themes/seo_dream/assets/css/owl.css">
+    <!-- 기존 추가 CSS -->
+    <!-- WYSWYG 에디터 링크 -->
+    <link rel="stylesheet" href="~/lib/trumbowyg/ui/trumbowyg.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <!-- Toast 메시지창 js 라이브러리용 CSS -->
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css" />
+</head>
+<body>
+    <!-- ***** Preloader Start ***** -->
+    <div id="js-preloader" class="js-preloader">
+        <div class="preloader-inner">
+            <span class="dot"></span>
+            <div class="dots">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </div>
+    <!-- ***** Preloader End ***** -->
+    <!-- ***** Header Area Start ***** -->
+    <!-- 01. 여기까지 _NewLayout.cshtml에 복사하면 됨 -->
+    <!-- 02. 아래부터 다음 주석까지 /Views/Home/Index.html 에 집어넣습니다 -->
+    <header class="header-area header-sticky wow slideInDown" data-wow-duration="0.75s" data-wow-delay="0s">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <nav class="main-nav">
+                        <!-- ***** Logo Start ***** -->
+                        <a asp-action="Index" asp-controller="Home" class="logo" style="font-family:Dongle">
+                            <h4>IoT Portfolio <img src="~/iot2.png" alt=""></h4>
+                        </a>
+                        <!-- ***** Logo End ***** -->
+                        <!-- ***** Menu Start ***** -->
+                        <ul class="nav">
+                            <li class="scroll-to-section"><a asp-controller="Home" asp-action="Index" class="active dongle-bold" >홈</a></li>
+                            <li class="scroll-to-section"><a href="#features" class="dongle-bold">스킬</a></li>
+                            <li class="scroll-to-section"><a href="#about" class="dongle-bold">소개</a></li>
+                            @*<li class="scroll-to-section"><a href="#services">Services</a></li>*@
+                            <li class="scroll-to-section"><a href="#portfolio" class="dongle-bold">포트폴리오</a></li>
+                            <li class="scroll-to-section"><a href="#contact" class="dongle-bold">문의하기</a></li>
+                            <li class="scroll-to-section"><a asp-action="Index" asp-controller="Board" class="dongle-bold">공지사항</a></li>
+                            @if (signInManager.IsSignedIn(User))
+                            {
+                                @if (User.IsInRole("Admin"))
+                                {
+                                    <li class="scroll-to-section">
+                                        <a asp-controller="Admin" asp-action="ListRoles">권한관리</a>
+                                    </li>
+                                }
+
+                                <li class="scroll-to-section">
+                                    <a asp-controller="Account" asp-action="Profile" asp-route-userName="@userManager.GetUserName(User)">
+                                        프로필
+                                    </a>
+                                </li>
+
+                                <li class="scroll-to-section">
+                                    <form asp-controller="Account" asp-action="Logout" method="post">
+                                        <button type="submit" class="btn btn-link"> @userManager.GetUserName(User)</button>
+                                    </form>
+                                </li>  
+                            }
+
+                            else
+                            {
+                                <li class="scroll-to-section">
+                                    <a asp-controller="Account" asp-action="Register">회원가입</a>
+                                </li>
+
+                                <li class="scroll-to-section">
+                                    <a asp-controller="Account" asp-action="Login">로그인</a>
+                                </li>
+                            }
+                            
+                            @*드롭다운*@
+                            <li class="scroll-to-section">
+                                <a href="#" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <img src="https://www.google.com/logos/fnbx/animal_paws/cat_kp_lm.gif" 
+                                         alt="cat" width="32" height="32" class="rounded-circle">
+                                </a> 
+                                <form asp-controller="Account" asp-action="Logout" method="post" id="logoutForm">
+                                    <ul class="dropdown-menu text-small shadow" >
+                                        <li><a class="dropdownaccordion-item" href="#">@userManager.GetUserName(User)</a></li>
+                                        @if (User.IsInRole("Admin"))
+                                        {
+                                            <li><a class="dropdown-item dongle-bold" asp-action="ListRoles" asp-controller="Admin">권한목록</a></li>
+                                        }
+                                        <li>
+                                            <a class="dropdown-item" asp-action="Profile" asp-controller="Account"
+                                               asp-route-userName="@userManager.GetUserName(User)">프로필</a>
+                                        </li>
+                                        <li><hr class="dropdown-divider"></li>
+                                        <li><button class="dropdown-item" href="submit">로그아웃</button></li>
+                                    </ul>
+
+                                </form>
+                                <form asp-controller="Account" asp-action="Logout" method="post" id="logoutForm">
+                                    <button type="submit" value="@userManager.GetUserName(User)" class="btn btn-link"></button>
+                                </form>
+                            </li>
+                        </ul>
+                        <a class='menu-trigger'>
+                            <span>Menu</span>
+                        </a>
+
+                        
+
+                        <!-- ***** Menu End ***** -->
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- ***** Header Area End ***** -->
+    <div>
+        <!-- 필수!!! -->
+        @RenderBody()
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <p>
+                        Copyright © 2023 PKNU AC., Ltd. All Rights Reserved.
+
+                        <br>Web Designed by <a rel="nofollow" href="https://templatemo.com" target="_blank" title="free CSS templates">TemplateMo</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Scripts -->
+    <!-- jQuery & Bootstrap CDN LINKs -->
+    @*<script src="~/themes/seo_dream/vendor/jquery/jquery.min.js"></script>
+    <script src="~/themes/seo_dream/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>*@
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g="
+            crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+    <!-- SEO Dream용 테마를 위해서 개발자 만든 js -->
+    <script src="~/themes/seo_dream/assets/js/owl-carousel.js"></script>
+    <script src="~/themes/seo_dream/assets/js/animation.js"></script>
+    <script src="~/themes/seo_dream/assets/js/imagesloaded.js"></script>
+    <script src="~/themes/seo_dream/assets/js/custom.js"></script>
+    <!-- WYSWYG 에디터용 js & 한국어언어팩 js -->
+    <script src="~/lib/trumbowyg/trumbowyg.min.js"></script>
+    <script src="~/lib/trumbowyg/langs/ko.min.js"></script>
+    <!-- trumbowyg를 site.js에서 부르기 때문에 상위에 trumbowyg에 관련된 js가 먼저 나와야.. -->
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
