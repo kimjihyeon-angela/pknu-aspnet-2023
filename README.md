@@ -63,11 +63,18 @@ ASP.NET 학습 리포지토리
 ## Day 09
 - ASP.Net Core MVC
 	- 부트스트랩 테마(SEO Dream) 완료
-- ASP.Net RestAPI (JQuery, WPF)
-	- RestAPI Server
-	- WPF Client
+		- 스크롤이 되는 화면, 안되는 화면 메뉴 분리
+		- 포트폴리오 동적 관리(이미지 업로드)
+		- IIS .net6.0 런타임 설치
+		- IIS 설정이 꼬일 경우 .net6.0 다시 설치해야함
+	- 다른 Bootstrap 테마 적용
+	
 	
 ## Day 10
+- ASP.Net RestAPI (JQuery, WPF)
+	- OpenAPI와 유사한 서비스 운영
+	- RestAPI Server
+	- WPF Client
 - ASP.Net RestAPI (JQuery, WPF)
 	- RestAPI Server
 	- WPF Client
