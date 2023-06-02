@@ -54,7 +54,7 @@
                 <ul>
                     <li><a class="nav-link scrollto active" href="#hero">홈</a></li>
                     <li><a class="nav-link scrollto" href="#about">스킬</a></li>
-                    <li><a class="nav-link scrollto" href="#services">소개</a></li>
+                    <li><a class="nav-link scrollto" href="#cta">소개</a></li>
                     <li><a class="nav-link scrollto" href="#portfolio">포트폴리오</a></li>
                     <li class="nav-link scrollto"><a asp-action="Index" asp-controller="Board">공지사항</a></li>
                     @if (signInManager.IsSignedIn(User))
@@ -75,10 +75,11 @@
                                             <li class="nav-link scrollto"><a asp-controller="Admin" asp-action="ListRoles">권한관리</a></li>
                                             <li class="nav-link scrollto"><a asp-controller="Portfolio" asp-action="Index">포트폴리오 관리</a></li>
                                         }
-                                        <li><hr class="dropdown-divider"></li>
+                                        <li>
+                                            <hr class="dropdown-divider"></li>
                                         <li>
                                             <a>
-                                            <button class="dropdown-item" href="submit">로그아웃</button>
+                                                <button class="dropdown-item" href="submit">로그아웃</button>
                                             </a>
                                         </li>
                                         </form>
@@ -163,9 +164,6 @@
         
     }
     <!-- End Hero -->
-
-
-
 
     <div>
         <!-- 필수!!! -->

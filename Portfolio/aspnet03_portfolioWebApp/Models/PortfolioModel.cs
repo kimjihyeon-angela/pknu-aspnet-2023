@@ -27,7 +27,7 @@ namespace aspnet03_portfolioWebApp.Models
         public string? Url { get; set; }
 
         [DisplayName("파일명")]
-        [FileExtensions(Extensions =".png,.jpg,.jpeg", ErrorMessage = "이미지 파일을 선택하세요") ]
+        [FileExtensions(Extensions =".png,.jpg,.jpeg,.gif", ErrorMessage = "이미지 파일을 선택하세요") ]
         public string? FileName { get; set; }
     }
 
@@ -57,7 +57,7 @@ namespace aspnet03_portfolioWebApp.Models
         public IFormFile? PortfolioImage { get; set; }
 
         [DisplayName("파일명(585x400)권장")]
-        [FileExtensions(Extensions = ".png,.jpg,.jpeg", ErrorMessage = "이미지 파일을 선택하세요")]
+        [FileExtensions(Extensions = ".png,.jpg,.jpeg,.gif", ErrorMessage = "이미지 파일을 선택하세요")]
         public string? FileName { get; set; }
     }
 }
