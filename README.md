@@ -81,3 +81,24 @@ ASP.NET 학습 리포지토리
 - 개인포트폴리오
 	- 부트스트랩 테마 재적용
 	
+## Day 11
+- ASP.Net RestAPI (JQuery, WPF)
+	- OpenAPI와 유사한 서비스 운영
+	- RestAPI Server
+	- WPF Client
+- ASP.Net RestAPI (JQuery, WPF)
+	- RestAPI Server
+	- WPF Client
+- 개인포트폴리오
+	- 부트스트랩 테마 재적용
+	
+## Day 12
+- ASP.Net RestAPI (JQuery, WPF)
+	- OpenAPI와 유사한 서비스 운영
+	- RestAPI Server
+	- WPF Client
+- ASP.Net RestAPI (JQuery, WPF)
+	- RestAPI Server
+	- WPF Client
+- 개인포트폴리오
+	- 부트스트랩 테마 재적용
