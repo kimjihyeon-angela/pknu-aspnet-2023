@@ -101,7 +101,11 @@ ASP.NET 학습 리포지토리
 	- RestAPI Server
 	- WPF Client
 - 개인포트폴리오
-	- 부트스트랩 테마 재적용
+	- 부트스트랩 테마 재적용(Arsha 테마)
+	
+	<img src ="https://raw.githubusercontent.com/kimjihyeon-angela/pknu_aspnet_2023/main/images/Portfolio.gif" width="700"/>
+	
+	
 	
 ## Day13
 - ASP.Net RestAPI
